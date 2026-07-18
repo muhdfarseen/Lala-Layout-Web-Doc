@@ -37,9 +37,9 @@ function HeroSection() {
       <div className="absolute inset-0 hero-bg-glow" />
 
       <div className="max-w-[1100px] mx-auto px-6 relative">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-8">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-8">
           {/* Left Content */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 text-center lg:text-left">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full badge-green px-3.5 py-1.5 mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
@@ -47,7 +47,7 @@ function HeroSection() {
             </div>
 
             {/* Heading - Rollup style */}
-            <h1 className="text-4xl lg:text-[56px] font-bold leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-[56px] font-bold leading-[1.1] tracking-tight mb-6">
               <span className="hero-gradient-text font-gummy">Lala Layout</span>
               <br />
               <span className="text-[var(--text-primary)]">
@@ -58,13 +58,13 @@ function HeroSection() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base lg:text-lg font-medium text-[var(--text-secondary)] max-w-[480px] leading-relaxed mb-10">
+            <p className="text-sm sm:text-base lg:text-lg font-medium text-[var(--text-secondary)] max-w-[480px] mx-auto lg:mx-0 leading-relaxed mb-10">
               8 powerful layout components — Center, Stack, Grid, Flex, and more.
               Build pixel-perfect, responsive interfaces with zero dependencies.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-start gap-4">
+            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 w-full sm:w-auto">
               <Link to="/docs">
                 <Button size="lg" className="text-sm h-12 px-8 bg-[#4555E5] hover:bg-[#3645c7] text-white border-0">
                   Get Started
@@ -74,12 +74,12 @@ function HeroSection() {
 
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-3 h-12 px-6 rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)] hover:bg-[var(--hover-bg)] transition-all duration-200 group shadow-sm"
+                className="flex items-center gap-2 sm:gap-3 h-10 sm:h-12 px-4 sm:px-6 rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)] hover:bg-[var(--hover-bg)] transition-all duration-200 group shadow-sm max-w-full overflow-hidden"
               >
-                <code className="text-sm font-mono text-[var(--text-secondary)] font-medium">
+                <code className="text-[11px] sm:text-sm font-mono text-[var(--text-secondary)] font-medium truncate">
                   npm i @muhdfarseen/lala-layout
                 </code>
-                <div className="text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
+                <div className="text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors flex-shrink-0">
                   {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
                 </div>
               </button>
@@ -93,7 +93,7 @@ function HeroSection() {
             <img
               src="/lalalayoutlogo.svg"
               alt="Lala Layout Logo"
-              className="w-[200px] h-[200px] lg:w-[280px] lg:h-[280px] relative z-10"
+              className="w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] lg:w-[280px] lg:h-[280px] relative z-10"
             />
           </div>
         </div>
@@ -119,9 +119,9 @@ function BentoGridSection() {
                 Center, Container, Flex, Grid, Group, SimpleGrid, Space, and Stack — a complete toolkit.
               </p>
             </div>
-            <div className="absolute right-0 top-0 bottom-0 h-full hidden md:block opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-              <img src="/inwhitemode.svg" alt="Layout Illustration" className="h-full w-auto object-cover dark:hidden" />
-              <img src="/indarkmode.svg" alt="Layout Illustration" className="h-full w-auto object-cover hidden dark:block" />
+            <div className="-mx-6 -mb-6 mt-4 md:m-0 md:absolute md:right-0 md:top-0 md:bottom-0 md:h-full md:w-auto flex justify-center md:block opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+              <img src="/inwhitemode.svg" alt="Layout Illustration" className="w-full md:w-auto md:h-full object-cover rounded-b-3xl md:rounded-none dark:hidden" />
+              <img src="/indarkmode.svg" alt="Layout Illustration" className="w-full md:w-auto md:h-full object-cover rounded-b-3xl md:rounded-none hidden dark:block" />
             </div>
           </div>
 
@@ -132,8 +132,8 @@ function BentoGridSection() {
             <p className="text-sm text-[var(--text-secondary)] font-medium">
               All layout props support breakpoint objects for mobile-first responsive design.
             </p>
-            <div className="mt-4 bg-[var(--bg-primary)]/60 rounded-xl p-3">
-              <code className="text-[11px] font-mono text-[var(--text-secondary)] leading-relaxed block">
+            <div className="mt-4 bg-[var(--bg-primary)]/60 rounded-xl p-3 overflow-x-auto">
+              <code className="text-[11px] font-mono text-[var(--text-secondary)] leading-relaxed block whitespace-nowrap">
                 cols={'{{ '}base: 1, sm: 2, lg: 4{' }}'}
               </code>
             </div>
@@ -195,10 +195,10 @@ function InstallCTASection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <button
             onClick={handleCopy}
-            className="flex items-center gap-3 h-12 px-6 rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)] hover:bg-[var(--bg-primary)] transition-all duration-200 group"
+            className="flex items-center gap-2 sm:gap-3 h-10 sm:h-12 px-4 sm:px-6 rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)] hover:bg-[var(--bg-primary)] transition-all duration-200 group"
           >
-            <code className="text-sm font-mono text-[var(--text-primary)] font-medium">
-              npm install @muhdfarseen/lala-layout
+            <code className="text-[11px] sm:text-sm font-mono text-[var(--text-primary)] font-medium">
+              npm i @muhdfarseen/lala-layout
             </code>
             <div className="text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
               {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}

@@ -204,31 +204,46 @@ html {
 /* Rollup-style logo glow — outer soft spread */
 .hero-logo-glow-outer {
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 300px;
+  height: 300px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(59, 77, 250, 0.25) 0%, rgba(59, 77, 250, 0.08) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(59, 77, 250, 0.15) 0%, rgba(59, 77, 250, 0.05) 45%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   pointer-events: none;
-  filter: blur(40px);
+  filter: blur(25px);
 }
 
 /* Inner concentrated glow */
 .hero-logo-glow-inner {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(59, 77, 250, 0.4) 0%, rgba(59, 77, 250, 0.15) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(59, 77, 250, 0.25) 0%, rgba(59, 77, 250, 0.1) 50%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   pointer-events: none;
-  filter: blur(20px);
+  filter: blur(15px);
+}
+
+@media (min-width: 768px) {
+  .hero-logo-glow-outer {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(59, 77, 250, 0.25) 0%, rgba(59, 77, 250, 0.08) 45%, transparent 70%);
+    filter: blur(40px);
+  }
+  .hero-logo-glow-inner {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(59, 77, 250, 0.4) 0%, rgba(59, 77, 250, 0.15) 50%, transparent 70%);
+    filter: blur(20px);
+  }
 }
 
 .dark .hero-logo-glow-outer {
