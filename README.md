@@ -1,32 +1,43 @@
-# React + TypeScript + Vite
+# Lala Layout - Documentation Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![Lala Layout](public/lalalayoutlogo.svg)
 
-Currently, two official plugins are available:
+This repository contains the official documentation website for **[Lala Layout](https://github.com/muhdfarseen/Lala-Layout)**, the lightweight React layout toolkit with zero dependencies. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built with React, TypeScript, and Vite, this documentation site showcases the power and simplicity of the Lala Layout components.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Beautiful Dark Mode**: Features a premium dark mode aesthetic inspired by modern, sleek documentation websites.
+- **Interactive Component Previews**: Play with responsive layout props directly in the browser.
+- **Zero Dependencies**: Showcases how Lala Layout builds complex interfaces without bloating your bundle.
+- **Fast & Lightweight**: Built on top of Vite for rapid development and lightning-fast loading speeds.
 
-## Expanding the Oxlint configuration
+## Local Development
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+To run the documentation website locally:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+# Clone the repository
+git clone https://github.com/muhdfarseen/Lala-Layout-Web-Doc.git
+
+# Navigate to the project directory
+cd Lala-Layout-Web-Doc
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Tech Stack
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
+
+## Related
+
+- [Lala Layout Core Library](https://github.com/muhdfarseen/Lala-Layout)
