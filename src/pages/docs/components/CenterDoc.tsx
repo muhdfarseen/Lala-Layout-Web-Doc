@@ -1,4 +1,3 @@
-import { CodeBlock } from '@/components/CodeBlock'
 import { PropsTable } from '@/components/PropsTable'
 import { Configurator } from '@/components/Configurator'
 import { DecorativeBox } from '@/components/DecorativeBox'

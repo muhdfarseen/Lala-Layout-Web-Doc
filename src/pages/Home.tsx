@@ -5,14 +5,10 @@ import {
   Copy,
   Check,
   Component,
-  Box,
-  LayoutGrid,
   Zap,
-  Sparkles,
   Shield,
   Smartphone,
   Palette,
-  TreePine,
 } from 'lucide-react'
 import { useState } from 'react'
 

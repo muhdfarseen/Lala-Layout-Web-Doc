@@ -1,9 +1,8 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Menu, X, Sun, Moon, ArrowUpRight } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 export function Navbar() {
-  const location = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== 'undefined') {
