@@ -66,7 +66,7 @@ function HeroSection() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 w-full sm:w-auto">
               <Link to="/docs">
-                <Button size="lg" className="text-sm h-12 px-8 bg-[#4555E5] hover:bg-[#3645c7] text-white border-0">
+                <Button size="lg" className="text-sm h-12 px-8 bg-[#4555E5] hover:bg-[#3645c7] text-white border-0 rounded-xl">
                   Get Started
                   <ArrowUpRight className="w-4 h-4 ml-1" />
                 </Button>
@@ -206,7 +206,7 @@ function InstallCTASection() {
           </button>
 
           <Link to="/docs">
-            <Button size="lg" className="text-sm h-12 px-8 bg-[#4555E5] hover:bg-[#3645c7] text-white border-0">
+            <Button size="lg" className="text-sm h-12 px-8 bg-[#4555E5] hover:bg-[#3645c7] text-white border-0 rounded-xl">
               Read the docs
               <ArrowUpRight className="w-4 h-4 ml-1" />
             </Button>
