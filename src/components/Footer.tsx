@@ -17,7 +17,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-[var(--text-secondary)] mt-3 font-medium leading-relaxed">
-              Lightweight, zero-dependency React layout components. Build beautiful layouts with any UI library.
+              Lightweight, zero-dependency React layout components. Build beautiful layouts with ease.
             </p>
           </div>
 
