@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { BookOpen, Box, Columns3, Grip, LayoutGrid, Layers, MoveHorizontal, AlignVerticalSpaceAround, Component, ChevronRight } from 'lucide-react'
+import { BookOpen, Box, Columns3, Grip, LayoutGrid, Layers, MoveHorizontal, AlignVerticalSpaceAround, UnfoldVertical, ChevronRight } from 'lucide-react'
 
 const components = [
   { name: 'Center', path: '/docs/components/center', icon: AlignVerticalSpaceAround },
@@ -8,8 +8,8 @@ const components = [
   { name: 'Grid', path: '/docs/components/grid', icon: LayoutGrid },
   { name: 'Group', path: '/docs/components/group', icon: Columns3 },
   { name: 'SimpleGrid', path: '/docs/components/simplegrid', icon: Grip },
-  { name: 'Space', path: '/docs/components/space', icon: Layers },
-  { name: 'Stack', path: '/docs/components/stack', icon: Component },
+  { name: 'Space', path: '/docs/components/space', icon: UnfoldVertical },
+  { name: 'Stack', path: '/docs/components/stack', icon: Layers },
 ]
 
 export function DocsSidebar() {
