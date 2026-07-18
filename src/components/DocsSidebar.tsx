@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { BookOpen, Box, Columns3, Grip, LayoutGrid, Layers, MoveHorizontal, AlignVerticalSpaceAround, UnfoldVertical, ChevronRight } from 'lucide-react'
 
-const components = [
+export const docsComponents = [
   { name: 'Center', path: '/docs/components/center', icon: AlignVerticalSpaceAround },
   { name: 'Container', path: '/docs/components/container', icon: Box },
   { name: 'Flex', path: '/docs/components/flex', icon: MoveHorizontal },
@@ -42,7 +42,7 @@ export function DocsSidebar() {
             Components
           </h3>
           <div className="space-y-0.5">
-            {components.map(({ name, path, icon: Icon }) => {
+            {docsComponents.map(({ name, path, icon: Icon }) => {
               const isActive = location.pathname === path
               return (
                 <Link

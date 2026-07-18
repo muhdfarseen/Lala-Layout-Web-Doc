@@ -177,17 +177,6 @@ html {
 .dark .code-block .attr { color: #d2a8ff; }
 .dark .code-block .value { color: #a5d6ff; }
 
-/* ===== Navbar ===== */
-.navbar-blur {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
-.dark .navbar-blur {
-  background: rgba(28, 28, 31, 0.8);
-}
-
 /* ===== Hero Section ===== */
 .hero-gradient-text {
   background: linear-gradient(135deg, #3B4DFA 0%, #6C7BFF 40%, #3B82F6 70%, #2563EB 100%);

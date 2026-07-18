@@ -9,10 +9,10 @@ export function Footer() {
           {/* Brand */}
           <div className="max-w-[300px]">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="h-7 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <img src="/lalalayout.svg" alt="Lala Layout" className="w-full h-full object-contain logo-light" />
-                <img src="/lalalayoutondark.svg" alt="Lala Layout" className="w-full h-full object-contain logo-dark" />
+            <Link to="/" className="flex items-center gap-2.5 group w-fit">
+              <div className="h-7 flex items-center justify-start group-hover:scale-110 transition-transform duration-300 origin-left">
+                <img src="/lalalayout.svg" alt="Lala Layout" className="h-full w-auto object-contain logo-light" />
+                <img src="/lalalayoutondark.svg" alt="Lala Layout" className="h-full w-auto object-contain logo-dark" />
               </div>
             </Link>
 

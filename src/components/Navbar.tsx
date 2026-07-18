@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Sun, Moon, ArrowUpRight } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { docsComponents } from './DocsSidebar'
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== 'undefined') {
       return document.documentElement.classList.contains('dark')
@@ -32,15 +34,15 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 navbar-blur border-b border-[var(--border-color)]">
+    <header className="sticky top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#1c1c1f]/80 backdrop-blur-[20px] border-b border-[var(--border-color)]">
       <nav className="max-w-[1200px] mx-auto flex items-center justify-between px-6 h-16">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="h-8 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+          <div className="h-8 flex items-center justify-start group-hover:scale-105 transition-transform duration-300 origin-left">
             <img
               src={isDark ? '/lalalayoutondark.svg' : '/lalalayout.svg'}
               alt="Lala Layout"
-              className="w-full h-full object-contain"
+              className="h-full w-auto object-contain"
             />
           </div>
         </Link>
@@ -135,12 +137,43 @@ export function Navbar() {
             href="https://github.com/muhdfarseen/Lala-Layout"
             target="_blank"
             rel="noopener noreferrer"
-            className="block py-2 text-sm font-medium text-[var(--text-secondary)]"
+            className="block py-2 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
           >
             GitHub ↗
           </a>
+          
+          {/* Docs Mobile Menu */}
+          {location.pathname.startsWith('/docs') && (
+            <div className="pt-4 mt-2 border-t border-[var(--border-color)]">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)] mb-3 px-1">
+                Components
+              </h3>
+              <div className="space-y-1">
+                {docsComponents.map((component) => {
+                  const isActive = location.pathname === component.path
+                  const Icon = component.icon
+                  return (
+                    <Link
+                      key={component.name}
+                      to={component.path}
+                      onClick={() => setMobileOpen(false)}
+                      className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        isActive
+                          ? 'bg-[var(--hover-bg)] text-[var(--text-primary)]'
+                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--hover-bg)]'
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" />
+                      {component.name}
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+          )}
         </div>
       )}
+
     </header>
   )
 }
